@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Tienda</title>
+</head>
+
+<body onload="imprimir()" class="container">
+    <header>
+        <h1>El Tour de los Libros</h1>
+    </header>
+    <hr>
+    <div class="row"> 
+        <div class="col-5">
+            <!--Formulario Emuladoi (Sin equiteta for)-->
+            <fieldset>
+            <div class="mb-3">
+                <label for="slCategoria" class="form-label">Categoria</label>
+                <select class="form-select form-select-lg mb-3"  name="slCategoria" id="slCategoria" aria-label=".form-select-lg example">
+                    <option value="0" selected>Seleccione</option>
+                    <option value="Lirico">Género lírico</option>
+                    <option value="Epico">Género épico</option>
+                    <option value="Drama">Género dramático</option>
+                    <option value="Romantico">Género romantico</option>
+                    <option value="Infantil">Género infantil</option>
+                    <option value="Tarror">Género terror</option>
+                  </select>
+            </div>  
+            <fieldset>
+               <div class="mb-3">
+                <label for="slEditorial" class="form-label">Editorial</label>
+                <select class="form-select form-select-lg mb-3"  name="slEditorial" id="slEditorial" aria-label=".form-select-lg example">
+                    <option value="0" selected>Seleccione</option>
+                    <option value="Alianza">Alianza (Grupo Anaya, Hachette Livre)</option>
+                    <option value="Ariel">Ariel(Grupo Planeta)</option>
+                    <option value="Cátedra">Cátedra(Grupo Anaya, Hachette Livre)</option>
+                    <option value="Tirant Lo Blanch">Tirant Lo Blanch</option>
+                    <option value="Marcial Pons">Marcial Pons</option>
+                    <option value="Tecnos">Tecnos (Grupo Anaya, Hachettte Livre)</option>
+                    <option value="Aranzadi">Aranzadi (Thompson Reuters)</option>
+                    <option value="Síntesis"> Síntesis</option>
+                  </select>
+            </div>    
+            </fieldset> 
+            <div class="mb-3">
+              <label for="txtNombre">Nombre</label>
+              <input type="txt" class="form-control"name="txtNombre" id="txtNombre" required>
+            </div>
+              <div class="mb-3">
+                <label for="txtCantidad" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="txtCantidad" min="0" value="0">
+              </div>
+              <div>
+                <button onclick="agregar()" type="button" class="btn btn-primary">Agregar</button>
+              </div>
+              <div>      
+              </div>
+
+            </fieldset>
+        </div>
+        <div class="col-2">
+
+        </div>  
+        <div class="col-5">
+          <h3>Transacción Final</h3>
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">Editorial</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Cantidad</th>
+                  
+                </tr>
+              </thead>
+              <tbody id="tblCategorias">
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td colspan="2">
+                          Total
+                      </td>
+                       <td>
+                      </td>
+                      <td>  
+                      </td>
+                       <td id="tdTotalProbables">
+                      </td>
+                  </tr>
+              </tfoot>
+            </table>
+      </div>   
+    </div>
+    
+    <footer>
+        <script src="js/script-index.js"></script>
+        
+    </footer>
+    
+</body>
+</html>
